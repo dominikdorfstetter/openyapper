@@ -220,14 +220,14 @@ Full documentation is available at **[dominikdorfstetter.github.io/openyapper](h
 The docs cover getting started, architecture, API reference, admin guide, deployment, and developer guides. To run the docs locally:
 
 ```bash
-cd website && npm install && npm start
+cd docs && npm install && npm start
 ```
 
 ## Deploy
 
 Deploy OpenYapper to a cloud platform with managed Postgres and Redis:
 
-- **[Railway](docs/deploy-railway.md)** &mdash; auto-detects Dockerfile, managed addons, free tier available
+- **[Railway](docs/docs/deployment/railway.md)** &mdash; auto-detects Dockerfile, managed addons, free tier available
 
 ## Development
 

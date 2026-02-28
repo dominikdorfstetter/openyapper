@@ -41,5 +41,5 @@ yarn-error.log*
 backend/static/dashboard/
 
 # docusaurus
-website/.docusaurus/
-website/build/
+docs/.docusaurus/
+docs/build/
