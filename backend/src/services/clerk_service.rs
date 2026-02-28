@@ -112,10 +112,7 @@ impl ClerkService {
 
         if !resp.status().is_success() {
             let status = resp.status();
-            return Err(ApiError::Internal(format!(
-                "Clerk API returned {}",
-                status
-            )));
+            return Err(ApiError::Internal(format!("Clerk API returned {}", status)));
         }
 
         let total_count: i64 = resp
@@ -148,14 +145,9 @@ impl ClerkService {
         if !resp.status().is_success() {
             let status = resp.status();
             if status.as_u16() == 404 {
-                return Err(ApiError::NotFound(
-                    "Clerk user not found".to_string(),
-                ));
+                return Err(ApiError::NotFound("Clerk user not found".to_string()));
             }
-            return Err(ApiError::Internal(format!(
-                "Clerk API returned {}",
-                status
-            )));
+            return Err(ApiError::Internal(format!("Clerk API returned {}", status)));
         }
 
         let user: ClerkApiUser = resp
@@ -190,14 +182,9 @@ impl ClerkService {
         if !resp.status().is_success() {
             let status = resp.status();
             if status.as_u16() == 404 {
-                return Err(ApiError::NotFound(
-                    "Clerk user not found".to_string(),
-                ));
+                return Err(ApiError::NotFound("Clerk user not found".to_string()));
             }
-            return Err(ApiError::Internal(format!(
-                "Clerk API returned {}",
-                status
-            )));
+            return Err(ApiError::Internal(format!("Clerk API returned {}", status)));
         }
 
         let user: ClerkApiUser = resp
@@ -223,14 +210,9 @@ impl ClerkService {
         if !resp.status().is_success() {
             let status = resp.status();
             if status.as_u16() == 404 {
-                return Err(ApiError::NotFound(
-                    "Clerk user not found".to_string(),
-                ));
+                return Err(ApiError::NotFound("Clerk user not found".to_string()));
             }
-            return Err(ApiError::Internal(format!(
-                "Clerk API returned {}",
-                status
-            )));
+            return Err(ApiError::Internal(format!("Clerk API returned {}", status)));
         }
 
         Ok(())
